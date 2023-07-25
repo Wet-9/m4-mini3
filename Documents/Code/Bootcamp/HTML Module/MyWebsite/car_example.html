@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Car Example</h2>
+<p>Demonstration of how to create an object in a class and apply functions and access the object properties and put them in html elements using JavaScript</p>
+<p id="carCompany"></p>
+<p id="carModel"></p>
+<p id="price"></p>
+<p id="color"></p>
+<script>
+class Car {
+  constructor(carModel, price, color, carCompany) {
+    this.carModel = carModel;
+    this.price = price;
+    this.color=color;
+    this.carCompany= carCompany;
+  }
+  car_company() {
+    return "I have a " + this.carCompany + " car";
+  }
+  car_model(){
+    return "model: " + this.carModel;
+  }
+  car_price(){
+    return "price: " + this.price + "$";
+  }
+  car_color(){
+    return "color: " + this.color;
+  }
+}
+mycar = new Car("accent",200000,"black","hyundai");
+document.getElementById("carCompany").innerHTML = mycar.car_company();
+document.getElementById("carModel").innerHTML = mycar.car_model();
+document.getElementById("price").innerHTML = mycar.car_price();
+document.getElementById("color").innerHTML = mycar.car_color();
+
+
+</script>
+</body>
+</html>

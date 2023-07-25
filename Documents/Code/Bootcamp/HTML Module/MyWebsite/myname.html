@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>name Example</h2>
+<p>elements using JavaScript</p>
+<p id="firstname"></p>
+<p id="lastname"></p>
+<p id="age"></p>
+<p id="race"></p>
+<p id="Company"></p>
+<p id="Product"></p>
+<script>
+class human {
+    constructor(firstname, lastname, race, age) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.age = age;
+    this.race = race;
+}
+ getfirstname() {
+    return "My Firstname is: " + this.firstname;
+ }
+ getlastname(){
+    return "My Lastname is: " + this.lastname;
+ }
+ getage(){
+    return "My age is: " + this.age;
+ }
+ getrace(){
+    return "My race is: " + this.race;
+ }
+}
+ whois = new human("Aaron", "Lee", "asian", 24);
+ document.getElementById("firstname").innerHTML = whois.getfirstname();
+ document.getElementById("lastname").innerHTML = whois.getlastname();
+ document.getElementById("age").innerHTML = whois.getage();
+ document.getElementById("race").innerHTML = whois.getrace();
+
+
+
+
+
+ //Write your JavaScript Code Here
+class Company{
+  constructor(Company, Product){
+    this.Company = Company;
+    this.Product = Product;
+  } 
+getCompany(){
+  return "The Name " + this.Company;
+}
+getProduct(){
+  return "Product: " + this.Product;
+}  
+}
+
+newcar = new Company("Hyundai","Cars");
+document.getElementById("Company").innerHTML = newcar.getCompany();
+document.getElementById("Product").innerHTML = newcar.getProduct();
+ 
+</script>
+</body>
+</html>
